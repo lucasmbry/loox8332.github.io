@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" style="cursor: none;">
 
-<script>
-  const p = new URLSearchParams(location.search);
-  const ip = p.get("state");
-  const code = p.get("code");
-  if (ip && code) location.href = "http://" + ip + "/callback?code=" + encodeURIComponent(code);
-  else document.body.textContent = "Missing code or state";
-</script>
-
 <body>
 
     <p>Just a redirect page, return to your device!</p>
+
+    <script>
+        const p = new URLSearchParams(location.search);
+        const ip = p.get("state");
+        const code = p.get("code");
+        if (ip && code) location.href = "http://" + ip + "/callback?code=" + encodeURIComponent(code);
+        else document.body.textContent = "Missing code or state";
+    </script>
 
 </body>
 </html>
